@@ -14,7 +14,7 @@
                     <!-- Name Input -->
                     <div class="col-md-6">
                         <div class="form-group has-default">
-                            <label for="name">Name</label>
+                            <label for="name"><i class="fa fa-airbnb"></i>Name</label>
                             <input
                                 class="form-control"
                                 type="text"
@@ -22,7 +22,6 @@
                                 id="name"
                                 placeholder="Name"
                                 value="{{ old('name') }}">
-
                             @error('name')
                             <p class="help is-danger">{{ $errors->first('name') }}</p>
                             @enderror
@@ -66,7 +65,7 @@
                     <!-- Role Input -->
                     <div class="col-md-9">
                         <div class="form-group has-default">
-                            <label for="pseudo">Role</label><input
+                            <label for="role">Role</label><input
                                 class="form-control"
                                 type="text"
                                 name="role"
@@ -83,7 +82,7 @@
                     <!-- Excerpt Input -->
                     <div class="col-md-9">
                         <div class="form-group has-default">
-                            <label for="pseudo">Excerpt</label><input
+                            <label for="excerpt">Excerpt</label><input
                                 class="form-control"
                                 type="text"
                                 name="excerpt"
@@ -100,34 +99,28 @@
                     <!-- Text Input -->
                     <div class="col-md-9">
                         <div class="form-group has-default">
-                            <label for="pseudo">Pseudo</label><input
+                            <label for="text">Text</label><input
                                 class="form-control"
                                 type="text"
-                                name="pseudo"
-                                id="pseudo"
-                                placeholder="Pseudo"
-                                value="{{ old('pseudo') }}">
+                                name="text"
+                                id="text"
+                                placeholder="Text"
+                                value="{{ old('text') }}">
 
-                            @error('name')
-                            <p class="help is-danger">{{ $errors->first('pseudo') }}</p>
+                            @error('text')
+                            <p class="help is-danger">{{ $errors->first('text') }}</p>
                             @enderror
                         </div>
                     </div>
 
                     <!-- Arrival Input -->
-                    <div class="w-100">
-                        <h2 class="heading-section">
-                            <small>Datetimepickers</small>
-                        </h2>
-                        <div class="w-100">
-                            <form action="" method="post" class="datepickers">
-                                <div class="form-group">
-                                    <!-- <label class="label-control" for="id_start_datetime">Datetime picker</label> -->
-                                    <div class="input-group date" id="id_0">
-                                        <input type="text" value="10/01/2019 05:32:00 PM" class="form-control" required/>
-                                    </div>
-                                </div>
-                            </form>
+
+                    <div class="col-md-6">
+                        <label for="date-time">Datepicker</label>
+                        <!-- <label class="label-control" for="id_start_datetime">Datetime picker</label> -->
+                        <div class="input-group date" id="id_0">
+                            <input type="text" value="10/01/2019 05:32:00 PM" class="form-control" id="date-time"
+                                   required/>
                         </div>
                     </div>
                 </div>
